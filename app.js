@@ -31,9 +31,14 @@ server.post({path : PATH , version: '0.0.1'} ,postNewiBeacon);
 server.put({path: PATH, version: '0.0.1'}, updateiBeacon);
 server.del({path : PATH +'/:ibeaconId' , version: '0.0.1'} ,deleteiBeacon);
 
-server.listen(port, ip_address, function(){
-	console.log("%s listening at %s", server.name, server.url);
-});
+if(env === 'developement'){
+    server.listen(port, ip_address, function(){
+    	console.log("%s listening at %s", server.name, server.url);
+    });
+}
+else{
+    server.listen(port);
+}
 
 function findAlliBeacons(req, res , next){
     res.setHeader('Access-Control-Allow-Origin','*');
