@@ -1,0 +1,34 @@
+{
+  "name": "NeuIBeaconRestService",
+  "version": "0.0.1",
+  "description": "RESTfull service to configure iBeacons and persist",
+  "main": "app.js",
+  "dependencies": {
+    "dtrace-provider": "~0.2.8",
+    "ldapjs": "~0.7.0",
+    "mongojs": "~0.10.1",
+    "restify": "~2.6.3"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.4.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sureshballa/neuibeaconsrest.git"
+  },
+  "keywords": [
+    "ibeacon",
+    "neudesic"
+  ],
+  "author": "Suresh Balla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sureshballa/neuibeaconsrest/issues"
+  },
+  "homepage": "https://github.com/sureshballa/neuibeaconsrest"
+}
