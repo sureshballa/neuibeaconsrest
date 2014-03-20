@@ -3,7 +3,7 @@ var mongojs = require('mongojs');
 
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'developement';
 
-var ip_address = '192.168.160.90';
+var ip_address = '192.168.0.102';
 var port =  process.env.PORT || '8081';
 
 var server = restify.createServer({
@@ -66,6 +66,7 @@ function findiBeacon(req, res , next){
             res.send(200 , success);
             return next();
         }
+        res.send(404);
         return next(err);
     })
 }
