@@ -3,7 +3,7 @@ var mongojs = require('mongojs');
 
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'developement';
 
-var ip_address = '192.168.0.102';
+var ip_address = '192.168.0.104';
 var port =  process.env.PORT || '8081';
 
 var server = restify.createServer({
@@ -77,6 +77,7 @@ function postNewiBeacon(req , res , next){
     ibeacon.description = req.params.description;
     ibeacon.location = req.params.location;
     ibeacon.imageBytes = req.params.imageBytes;
+    ibeacon.customJson = req.params.customJson;
     ibeacon._id = req.params._id;
     ibeacon.postedOn = new Date();
  
@@ -100,6 +101,7 @@ function updateiBeacon(req , res , next){
     ibeacon.description = req.params.description;
     ibeacon.location = req.params.location;
     ibeacon.imageBytes = req.params.imageBytes;
+    ibeacon.customJson = req.params.customJson;
     ibeacon.updatedOn = new Date();
 
     ibeacons.update({_id:req.params._id}, { $set: ibeacon } , function(err, success){
